@@ -52,7 +52,7 @@ button {
   padding: .5rem 1rem;
   color: #fff;
   font-size: var(--font-size-medium);
-  /* /* background-color: var(--color-keys-light); */
+border:1px solid lightgrey;
   background-color: var(--color-start);
   border-radius: 5px;
   -webkit-transition: var(--transition);
@@ -88,8 +88,8 @@ button {
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
-  margin-right: 2px;
+  padding: 15px 1px 0 1px;
+  margin-right: 5px;
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
@@ -161,6 +161,9 @@ button {
 
 .win {
   background-color: var(--color-win);
+  background: #fff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #72bcd4,var(--color-win));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #72bcd4, var(--color-win)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .win a {

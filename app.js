@@ -73,13 +73,15 @@ const show = document.getElementsByClassName('show');
 
 function checkWin() {
   if (show.length === letters.length) {
-   console.log('You won!')
-   overlay.style.display = 'flex';
+    overlay.style.display = 'flex';
     overlay.classList.add('win');
+    setInterval(() => {
+      document.location.reload();
+      overlay.style.display = 'none';
+    }, 2000);
   
     
   } else if (missed === 5) {
-    console.log('You lost!')
    overlay.style.display = 'flex';
     overlay.classList.add('lose');
     setInterval(() => {
@@ -98,7 +100,7 @@ qwerty.addEventListener('click', function (e) {
 
     const letterFound = checkLetter(e.target.textContent);
     if (letterFound == null) {
-      tries[missed].setAttribute('src', 'images/lostHeart.png');
+      tries[missed].setAttribute('src', 'images/lostHeart.png'); //I toggle the pictures so as I can have some contrasts on the project. However, the result is the this.
       missed++;
     }
   }
